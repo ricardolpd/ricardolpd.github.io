@@ -1,1 +1,5 @@
 title: Ann's Fancy Faces
+
+collections:
+  testimonials:
+    output: true

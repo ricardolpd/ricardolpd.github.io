@@ -1,0 +1,64 @@
+<div class='grid-row clearfix'>
+{% assign testimonials = (site.testimonials | where: "published" , "true" ) %}
+{% assign testimonials_size = (testimonials | size) %}
+{% assign index = 1 %}
+{% if testimonials_size > 2 %}
+  {% assign index = testimonials_size | divided_by: 2 %}
+  {% assign mod = testimonials_size | modulo: 2 %}
+  {% if mod != 0  %}
+    {% assign index = index | plus: 1  %}
+  {% endif %}
+{% endif %}
+{% if testimonials_size > 0 %}
+
+  <div class='grid-col grid-col-4'>
+    <section class='cws-widget'>
+      <section class='cws_widget_content'>
+        <div class='shortcode_carousel' data-carousel-column="1">
+          <div class='carousel_header clearfix'>
+            <div class='widget-title'>Testimonials</div>
+          </div>
+          <div class='carousel_content'>
+            {%assign index = index | minus: 1 %}
+            <ul>
+              {% for i in (0..index) %}
+              {% assign position = i | times: 2 %}
+              {% assign testimonial = testimonials[position] %}
+              <li>
+                <div class="testimonial clearfix">
+                  <div>
+                    <img src='{{ testimonial.image_url }}' alt />
+                    <p>{{ testimonial.description }}</p>
+                  </div>
+                  <div class="author">{{ testimonial.author }}</div>
+                </div>
+              {%assign next = position | plus: 1 %}
+              {% if next < testimonials_size %}
+                {% assign testimonial = testimonials[next] %}
+                <div class="testimonial clearfix">
+                  <div>
+                    <img src='{{ testimonial.image_url }}' alt />
+                    <p>{{ testimonial.description }}</p>
+                  </div>
+                  <div class="author">{{ testimonial.author }}</div>
+                </div>
+              {% endif %}
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+  </div>
+{% endif %}
+
+
+<!-- <div class="testimonial clearfix">
+  <div>
+    <%%>
+    <img src='{{ testimonial.image_url }}' alt />
+    <p>{{ testimonial.description }}</p>
+  </div>
+  <div class="author">{{ testimonial.author }}</div>
+</div> -->
