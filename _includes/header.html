@@ -1,0 +1,33 @@
+<!-- HEADER BEGIN -->
+<div class="top-panel">
+  <div class="l-page-width clearfix">
+      <div class="widget widget_cws_tweets">
+        <div class='cws-widget-content '>
+          <div class="latest_tweets ">
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+<!--/ .top-panel-->
+<div class="kids-bg-level-1">
+  <div class="bg-level-1"></div>
+  <header id="kids_header">
+    <div class="l-page-width clearfix">
+      {% include social_bar.html %}
+      <!-- .kids_social -->
+      <div class="kids_clear"></div>
+      <div id="kids_logo_block" class="logo-position-left">
+        <a id="kids_logo_text" href="{{ base }}/"><img src="{{ base }}/images/logo.png" alt="{{ site.title }}" title="{{ site.title }}" /></a>
+      </div>
+      {% include main_nav.html %}
+      <!-- #kids_main_nav -->
+    </div>
+    <!--/ .l-page-width-->
+  </header>
+  <!--/ #kids_header-->
+  <!-- HEADER END -->
+  {% if page.title == "Ann's Fancy Faces" %}
+  {% include slider.html %}
+  {% endif %}
+</div>

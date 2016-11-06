@@ -1,0 +1,62 @@
+---
+layout: breadcrumbs
+---
+<div class="bg-level-2-full-width-container kids_bottom_content">
+  <div class="bg-level-2-page-width-container no-padding">
+    <section class="kids_bottom_content_container">
+      <!-- ***************** - START Image floating - *************** -->
+      <div class="page-content">
+        <div class="bg-level-2 first-part"></div>
+        <div class="container l-page-width">
+          <div class="entry-container ">
+            <main>
+              <div class='grid-row clearfix'>
+                <div class='grid-col grid-col-9'>
+                  <section class='cws-widget'>
+                    <div class='widget-title'>About Our Company</div>
+                    <section class='cws_widget_content'>
+                      {{ content }}
+                        <div role="form" class="wpcf7" id="wpcf7-f622-p199-o1" lang="en-US" dir="ltr">
+                          <div class="screen-reader-response"></div>
+                          <form action="http://formspree.io/sample@gmail.com" method="POST" class="wpcf7-form contact-form">
+                            <p><span class="wpcf7-form-control-wrap your-name">
+                                <input type="text" name="name" value="" size="49" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name" />
+                              </span>
+                              <span class="wpcf7-form-control-wrap your-email">
+                                <input type="email" name="email" value="" size="49" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="E-mail" />
+                              </span>
+                              <span class="wpcf7-form-control-wrap your-message">
+                              <textarea name="message" cols="103" rows="8" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea></span>
+                              <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit" />
+                            </p>
+                          </form>
+                        </div>
+                    </section>
+                  </section>
+                </div>
+                <div class='grid-col grid-col-3'>
+                  <section class='cws-widget'>
+                    <div class='widget-title'>Contact Details</div>
+                    <section class='cws_widget_content'>
+                      <p>{{ page.booking_text}}</p>
+                      <strong>Contact: {{ site.phone }}</strong></br>
+                      <p><strong>email: <a class="link" href="mailto:{{ site.email }}">{{ site.email }}</a></strong></p>
+                    </section>
+                  </section>
+                </div>
+              </div>
+              <!-- comments block -->
+              <!-- //end comments block -->
+            </main>
+            <div class="kids_clear"></div>
+          </div>
+          <!-- .entry-container -->
+        </div>
+        <div class="bg-level-2 second-part"></div>
+      </div>
+      <!-- ***************** - END Image floating - *************** -->
+    </section>
+    <!-- .bottom_content_container -->
+  </div>
+  <div class="content_bottom_bg"></div>
+</div>

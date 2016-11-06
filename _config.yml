@@ -1,5 +1,7 @@
 ---
 title: Ann's Fancy Faces
+phone: 01234567890
+email: booking@annfancyface.co.uk
 timezone: UTC
 collections:
   posts:

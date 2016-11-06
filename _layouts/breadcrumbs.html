@@ -11,6 +11,18 @@ layout: base
 	{% include header.html %}
 	<!-- .bg-level-1 -->
 	<div id="kids_middle_container">
+      <div class="kids_top_content">
+        <div class="kids_top_content_middle ">
+          <div class="header_container ">
+            <div class="l-page-width">
+              <h1>{{ page.title }}</h1>
+              <ul id="breadcrumbs">
+                <li><a href="{{ base }}/" title="Home">Home</a></li> <span class="delimiter">&gt;</span>
+                <li><span class="current_crumb">{{ page.title }}</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
 		<!-- .content -->
 		{{ content }}
 	</div>
