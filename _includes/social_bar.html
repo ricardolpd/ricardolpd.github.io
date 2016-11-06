@@ -1,0 +1,5 @@
+<ul class="kids_social">
+  {% for website in site.data.social %}
+  <li><a href="{{ website.url }}" title="{{ website.title }}" target="_blank"><i class="{{ website.class }}"></i></a><span style="{{ website.style }}"></span></li>
+  {% endfor %}
+</ul>

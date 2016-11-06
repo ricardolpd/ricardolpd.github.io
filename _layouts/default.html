@@ -1,7 +1,6 @@
 ---
 layout: base
 ---
-
 <!DOCTYPE html>
 <!--[if lte IE 8]><html class="ie8 no-js" lang="en"><![endif]-->
 <!--[if IE 9]><html class="ie9 no-js" lang="en"><![endif]-->
@@ -29,7 +28,6 @@ layout: base
 				<div class="widget widget_cws_tweets">
 					<div class='cws-widget-content '>
 						<div class="latest_tweets ">
-
 						</div>
 					</div>
 				</div>
@@ -41,88 +39,13 @@ layout: base
 		<div class="bg-level-1"></div>
 		<header id="kids_header">
 			<div class="l-page-width clearfix">
-				<ul class="kids_social">
-					{% for website in site.data.social %}
-					<li><a href="{{ website.url }}" title="{{ website.title }}" target="_blank"><i class="{{ website.class }}"></i></a><span style="{{ website.style }}"></span></li>
-					{% endfor %}
-				</ul>
+				{% include social_bar.html %}
 				<!-- .kids_social -->
 				<div class="kids_clear"></div>
 				<div id="kids_logo_block" class="logo-position-left">
 					<a id="kids_logo_text" href="{{ base }}/"><img src="{{ base }}/images/logo.png" alt="{{ site.title }}" title="{{ site.title }}" /></a>
 				</div>
-				<nav id="kids_main_nav" class="menu-position-right">
-					<div class="menu-button">
-						<span class="menu-button-line"></span>
-						<span class="menu-button-line"></span>
-						<span class="menu-button-line"></span>
-					</div>
-					<ul id="menu-main" class="clearfix flexnav " data-breakpoint="800">
-						<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item"><a href="{{ base }}/">Home</a></li>
-						<li class="menu-item menu-item-has-children"><a href="{{ base }}/page-features.html">Features</a>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="page-features.html">Template Features</a></li>
-								<li class="menu-item menu-item-has-children"><a href="{{ base }}/content-elements.html">Content Elements</a>
-									<ul class="sub-menu">
-										<li class="menu-item"><a href="{{ base }}/page-grid.html">Grids Showcase</a></li>
-										<li class="menu-item"><a href="{{ base }}/content-elements.html">Content Elements</a></li>
-										<li class="menu-item"><a href="{{ base }}/page-video.html">Video</a></li>
-										<li class="menu-item"><a href="{{ base }}/typography.html">Text and Headings</a></li>
-									</ul>
-								</li>
-								<li class="menu-item"><a href="{{ base }}/pricing-tables.html">Pricing Tables</a></li>
-							</ul>
-						</li>
-						<li class="menu-item menu-item-has-children"><a href="{{ base }}/full-width-page.html">Pages</a>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="{{ base }}/full-width-page.html">Full Width Page</a></li>
-								<li class="menu-item"><a href="{{ base }}/doble-sidebars.html">Doble Sidebars</a></li>
-								<li class="menu-item"><a href="{{ base }}/right-navigation.html">Right Navigation</a></li>
-								<li class="menu-item"><a href="{{ base }}/left-navigation.html">Left Navigation</a></li>
-								<li class="menu-item"><a href="{{ base }}/right-nav-sidebar.html">Right Nav + Sidebar</a></li>
-								<li class="menu-item"><a href="{{ base }}/left-nav-sidebar.html">Left Nav + Sidebar</a></li>
-								<li class="menu-item menu-item-type-custom menu-item-object-custom"><a href="./page-404.html">404 Page</a></li>
-							</ul>
-						</li>
-						<li class="menu-itemmenu-item-has-children"><a href="{{ base }}/portfolio-full-width.html">Portfolio</a>
-							<ul class="sub-menu">
-								<li class="menu-item-has-children"><a href="#">Columns</a>
-									<ul class="sub-menu">
-										<li class="menu-item"><a href="{{ base }}/portfolio-1col.html">Portfolio 1 Column</a></li>
-										<li class="menu-item"><a href="{{ base }}/portfolio-2col.html">Portfolio 2 Columns</a></li>
-										<li class="menu-item"><a href="{{ base }}/portfolio-3col.html">Portfolio 3 Columns</a></li>
-										<li class="menu-item"><a href="{{ base }}/portfolio-4col.html">Portfolio 4 Columns</a></li>
-									</ul>
-								</li>
-								<li class="menu-item"><a href="{{ base }}/portfolio-full-width.html">Full-width page</a></li>
-								<li class="menu-item"><a href="{{ base }}/portfolio-right-sidebar.html">Right Sidebar</a></li>
-								<li class="menu-item"><a href="{{ base }}/portfolio-left-sidebar.html">Left Sidebar</a></li>
-								<li class="menu-item"><a href="{{ base }}/portfolio-double-sidebars.html">Double Sidebars</a></li>
-								<li class="menu-item"><a href="{{ base }}/portfolio-gallery.html">Gallery</a></li>
-								<li class="menu-item"><a href="{{ base }}/portfolio-gallery-sidebar.html">Gallery + Sidebar</a></li>
-							</ul>
-						</li>
-						<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href=".">Blog</a>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="{{ base }}/blog-right-sidebar.html">Right Sidebar</a></li>
-								<li class="menu-item"><a href="{{ base }}/blog-left-sidebar.html">Left Sidebar</a></li>
-								<li class="menu-item"><a href="{{ base }}/blog-double-sidebars.html">DoubleSidebars</a></li>
-								<li class="menu-item"><a href="{{ base }}/blog-fullwidth.html">Full Width</a></li>
-
-							</ul>
-						</li>
-						<li class="menu-item menu-item-has-children"><a href="{{ base }}/shop.html">Shop</a>
-							<ul class="sub-menu">
-								<li class="menu-item"><a href="{{ base }}/shop-shortcodes.html">Woo Shortcodes</a></li>
-								<li class="menu-item"><a href="{{ base }}/shop-cart.html">Cart</a></li>
-
-								<li class="menu-item"><a href="{{ base }}/shop-checkout.html">Checkout</a></li>
-								<li class="menu-item"><a href="{{ base }}/shop-account.html">My Account</a></li>
-							</ul>
-						</li>
-						<li class="menu-item"><a href="{{ base }}/contact/">Contact</a></li>
-					</ul>
-				</nav>
+				{% include main_nav.html %}
 				<!-- #kids_main_nav -->
 			</div>
 			<!--/ .l-page-width-->
@@ -227,164 +150,7 @@ layout: base
 	</div>
 	<!-- .end_content -->
 	<!-- FOOTER BEGIN -->
-	<div class="kids_bottom_container footer">
-		<div class="l-page-width">
-			<div class="wrapper">
-				<div class="widget widget_text">
-					<div class="textwidget">
-						<div class='shortcode_carousel' data-carousel-column="1">
-							<div class='carousel_header clearfix'>
-								<div class='widget-title'>Gallery</div>
-							</div>
-							<div class='carousel_content'>
-								<!-- see gallery_shortcode() -->
-								<div id='ngallery-1' class='ngallery clearfix column-1'>
-									<dl class='gallery-item'>
-										<dt class='gallery-icon '>
-											<div class='content-wrapper'>
-												<figure>
-													<a href="{{ base }}/pic/HappyFeet_1st4.jpg" data-rel="prettyPhoto[12135]" class="prettyPhoto kids_picture">
-														<img src="{{ base }}/pic/300x300-img-4.jpg" alt="" />
-													</a>
-												</figure>
-											</div>
-										</dt>
-									</dl>
-									<dl class='gallery-item'>
-										<dt class='gallery-icon'>
-											<div class='content-wrapper'>
-												<figure>
-													<a href="{{ base }}/pic/Tangled_3rd5.jpg" data-rel="prettyPhoto[12135]" class="prettyPhoto kids_picture">
-														<img src="{{ base }}/pic/300x300-img-12.jpg" alt="" />
-													</a>
-												</figure>
-											</div>
-										</dt>
-									</dl>
-									<dl class='gallery-item'>
-										<dt class='gallery-icon '>
-											<div class='content-wrapper'>
-												<figure>
-													<a href="{{ base }}/pic/LegoMovie_3rd4.jpg" data-rel="prettyPhoto[12135]" class="prettyPhoto kids_picture">
-														<img src="{{ base }}/pic/300x300-img-9.jpg" alt="" />
-													</a>
-												</figure>
-											</div>
-										</dt>
-									</dl>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="widget widget_cws_tweets">
-					<div class="cws-widget-content">
-						<!-- twitter header -->
-						<div class='carousel_header clearfix'>
-							<div class='widget_carousel_nav'>
-								<i class='prev fa fa-angle-left'></i>
-								<i class='next fa fa-angle-right'></i>
-							</div>
-							<h3 class="widget-title">Twitter</h3>
-						</div>
-						<!-- / twitter header -->
-						<!-- twitter carousel -->
-						<div class="twitter-carousel carousel latest_tweets"></div>
-						<!--/twitter carousel -->
-					</div>
-				</div>
-				<div class="widget widget_cws_latest_posts">
-					<div class="latest-posts-widget">
-						<h3 class="widget-title">Latest Posts</h3>
-						<div class="widget-content">
-							<ul>
-								<li>
-									<div class="kids_image_wrapper ">
-										<a href="{{ base }}/pic/HappyFeet_1st4.jpg" class="prettyPhoto kids_mini_picture" data-rel="prettyPhoto[rpwt]">
-											<img src="{{ base }}/pic/70x70-img-1.jpg" width="70" height="70" alt=""></a>
-									</div>
-									<div class="kids_post_content">
-										<h4><a href="#">Image Post</a></h4>
-										<p>Lorem ipsum dolor ...</p>
-										<p class="time-post">January 3, 2015</p>
-									</div>
-								</li>
-								<li>
-									<div class="kids_image_wrapper ">
-										<a href="{{ base }}/pic/LegoMovie_3rd4.jpg" class="prettyPhoto kids_mini_picture" data-rel="prettyPhoto[rpwt]">
-											<img src="{{ base }}/pic/70x70-img-2.jpg" width="70" height="70" alt=""></a>
-									</div>
-									<div class="kids_post_content">
-										<h4><a href="#">Image Post</a></h4>
-										<p>Lorem ipsum dolor ...</p>
-										<p class="time-post">January 2, 2015</p>
-									</div>
-								</li>
-								<li>
-									<div class="kids_image_wrapper ">
-										<a href="{{ base }}/pic/Tangled_3rd5.jpg" class="prettyPhoto kids_mini_picture" data-rel="prettyPhoto[rpwt]">
-											<img src="{{ base }}/pic/70x70-img-3.jpg" width="70" height="70" alt="">
-										</a>
-									</div>
-									<div class="kids_post_content">
-										<h4><a href="#">Video blog post</a></h4>
-										<p>Lorem ipsum dolor ...</p>
-										<p class="time-post">January 1, 2015</p>
-									</div>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="widget widget_calendar">
-					<h3 class="widget-title">Calendar</h3>
-					<div id="calendar_wrap">
-
-					</div>
-				</div>
-			</div>
-			<!-- /wrapper -->
-		</div>
-		<!--/ l-page-width-->
-	</div>
-	<!-- .kids_bottom_container -->
-	<div class="kids-footer-copyrights footer">
-		<div class="l-page-width  clearfix">
-			<div class="wrapper">
-				<ul class="kids_social">
-					<li><a href="https://plus.google.com/115553712051048113965" title="Google Plus" target="_blank"><i class="fa fa-google-plus fa-2x"></i></a><span style="background-color:#dd4b39;"></span></li>
-					<li><a href="https://www.facebook.com/CreaWS" title="Facebook" target="_blank"><i class="fa fa-facebook fa-2x"></i></a><span style="background-color:#3b5998;"></span></li>
-					<li><a href="https://www.youtube.com/user/cwsvideotuts" title="Youtube" target="_blank"><i class="fa fa-youtube-play fa-2x"></i></a><span style="background-color:#b31217;"></span></li>
-					<li><a href="https://twitter.com/Creative_WS" title="Twitter" target="_blank"><i class="fa fa-twitter fa-2x"></i></a><span style="background-color:#4099ff;"></span></li>
-					<li class="lang_bar">
-						<div id="lang_sel">
-							<ul>
-								<li>
-									<a href="#" class="lang_sel_sel icl-en"><img class="iclflag" src="{{ base }}/images/en.png" alt="en" title="English" /> &nbsp;
-									</a>
-									<ul>
-										<li class="icl-fr">
-											<a href="#"><img class="iclflag" src="{{ base }}/images/fr.png" alt="fr" title="Français" />&nbsp;</a>
-										</li>
-										<li class="icl-de">
-											<a href="#"><img class="iclflag" src="{{ base }}/images/de.png" alt="de" title="Deutsch" />&nbsp;</a>
-										</li>
-										<li class="icl-it">
-											<a href="#"><img class="iclflag" src="{{ base }}/images/it.png" alt="it" title="Italiano" />&nbsp;</a>
-										</li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</li>
-				</ul>
-				<div class="widget widget_text">
-					<div class="textwidget">Copyrights @2015: Happy Kids - Children HTML Template</div>
-				</div>
-			</div>
-		</div>
-		<div class="dark-mask"></div>
-	</div>
+	{% include footer.html %}
 	<script type='text/javascript' src='{{ base }}/js/jquery.min.js'></script>
 	<script type="text/javascript" src="{{ base }}/revslider/jquery.themepunch.revolution.min.js"></script>
 	<script type="text/javascript" src="{{ base }}/revslider/jquery.themepunch.tools.min.js"></script>
