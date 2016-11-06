@@ -2,10 +2,11 @@
 title: Ann's Fancy Faces
 timezone: UTC
 collections:
-  testimonials:
-    output: true
   posts:
     title: Posts
+    output: true
+  testimonials:
+    title: Testimonials
     output: true
   uploads:
     title: Uploads
