@@ -1,8 +1,10 @@
 ---
-title: Ann's Fancy Faces
+title: Mad Hatters
 phone: 01234567890
 email: booking@annfancyface.co.uk
 timezone: UTC
+
+include: ["_pages"]
 collections:
   posts:
     title: Posts
