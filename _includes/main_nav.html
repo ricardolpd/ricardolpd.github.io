@@ -16,7 +16,7 @@
     {% if page.nav_title == pages[i].nav_title %}
       {% assign  current_menu_item = "current-menu-item current_page_item" %}
     {% endif %}
-    base is: {{ base }}
+
     <li class="menu-item menu-item-type-custom menu-item-object-custom {{ current_menu_item }}">
         <a href="{{ base }}{{ pages[i].permalink }}">{{ pages[i].nav_title }}</a></li>
 
