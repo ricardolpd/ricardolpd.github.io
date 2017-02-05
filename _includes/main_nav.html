@@ -18,7 +18,7 @@
     {% endif %}
     base is: {{ base }}
     <li class="menu-item menu-item-type-custom menu-item-object-custom {{ current_menu_item }}">
-        <a href=".{{ pages[i].permalink }}">{{ pages[i].nav_title }}</a></li>
+        <a href="{{ base }}{{ pages[i].permalink }}">{{ pages[i].nav_title }}</a></li>
 
     {% endfor %}
   </ul>
