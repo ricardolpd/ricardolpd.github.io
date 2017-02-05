@@ -1,7 +1,12 @@
 ---
 title: Ann's Fancy Faces
 layout: default
+
+published: "true"
+main_nav: "true"
+nav_title: Home
 permalink: /
+index: 0
 ---
 <div class="kids_top_content">
   <div class="kids_top_content_middle homepage">
@@ -29,7 +34,7 @@ permalink: /
               <section class="text_part">Ut wisi enim ad minim veniam, quis nostrud exerci tation corper suscipit lobortis nisl.</section>
               <a href='#' class='cws_button '>More</a> </div>
           </div>
-        </div>-->
+        </div> -->
       </section>
     </div>
     <div class="bottom-border"></div>
@@ -54,7 +59,7 @@ permalink: /
                   </section>
                 </div>
               </div>
-              <div class='grid-row clearfix margin-top-none'>
+               <div class='grid-row clearfix margin-top-none'>
                 <div class='grid-col grid-col-4'>
                   <section class='cws-widget'>
                     <section class='cws_widget_content'>
@@ -102,40 +107,7 @@ permalink: /
               <div class="cws-widget callout_widget clearfix ">
                 <div class='grid-row clearfix'>
                   {% include testimonials.html %}
-                  <div class='grid-col grid-col-3'>
-                  <section class='cws-widget'>
-                    <section class='cws_widget_content'>
-                      <div class="recent_projects ">
-                        <h3 class="section-title">Mini Gallery</h3>
-                        <div class="projects_carousel clearfix" data-carousel-column="1">
-                          <div class="iso-item">
-                            <div class="content-wrapper">
-                              <figure>
-                                <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture" href="http://www.youtube.com/watch?v=HwXbtZXjbVE" title="Project 5"><img src="pic/347x347-img-2.jpg" alt="" /> </a>
-                              </figure>
-                            </div>
-                          </div>
-                          <div class="iso-item">
-                            <div class="content-wrapper">
-                              <figure>
-                                <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture" href="pic/HappyFeet_4th5.jpg" title="Project 4"><img src="pic/347x347-img-3.jpg" alt="" /> </a>
-                              </figure>
-                            </div>
-                          </div>
-                          <div class="iso-item">
-                            <div class="content-wrapper">
-                              <figure>
-                                <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture" href="pic/HappyFeet_3rd4.jpg" title="Project 3"><img src="pic/347x347-img-1.jpg" alt="" /> </a>
-                              </figure>
-                            </div>
-                          </div>
-                        </div>
-                        <!--/ .projects-carousel -->
-                      </div>
-                      <!--/ .work-carousel-->
-                    </section>
-                  </section>
-                </div>
+                  {% include mini_gallery.html %}
                 </div>
               </div>
               <!-- comments block -->

@@ -1,0 +1,28 @@
+{% assign pages = (site.data.gallery | where: "promote" , "true" ) %}
+{% assign pages = (pages | where: "published" , "true" ) %}
+{% assign size = pages | size %}
+
+{% if size > 0 %}
+<div class='grid-col grid-col-3'>
+<section class='cws-widget'>
+  <section class='cws_widget_content'>
+    <div class="recent_projects ">
+      <h3 class="section-title">Mini Gallery</h3>
+      <div class="projects_carousel clearfix" data-carousel-column="1">
+        {% for image in pages %}
+        <div class="iso-item">
+          <div class="content-wrapper">
+            <figure>
+              <a data-rel="prettyPhoto[rs_projects]" class="prettyPhoto kids_picture" href="{{ image.url }}" title="{{ image.title }}">
+                <img src="{{ image.thumb-url }}" alt="{{ image.description }}" />
+              </a>
+            </figure>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</section>
+</div>
+{% endif %}
