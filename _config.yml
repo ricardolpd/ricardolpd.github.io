@@ -1,8 +1,8 @@
 ---
-title: Mad Hatters
-phone: 01234567890
-email: booking@annfancyface.co.uk
-timezone: UTC
+title: The Mad Hatter
+phone: '07756145046'
+email: ann.themadhatter@gmail.com
+timezone: GMT+1
 
 include: ["_pages"]
 collections:

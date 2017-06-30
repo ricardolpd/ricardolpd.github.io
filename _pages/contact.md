@@ -7,6 +7,6 @@ permalink: /contact/
 published: "true"
 main_nav: "true"
 nav_title: Contact
-index: 3
+index: 4
 ---
 ## This is some sample **text for contact us**.

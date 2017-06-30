@@ -9,9 +9,8 @@ index: 1
 col_size: 4
 ---
 
-{% assign pages = (site.data.gallery | where: "published" , "true" ) %}
+{% assign pages = (site.data.gallery | where: "published" , "true") %}
 {% assign size = pages | size %}
-
 
 {% if size > 0 %}
 <div class="bg-level-2-full-width-container kids_bottom_content">
@@ -28,7 +27,7 @@ col_size: 4
                                     <section class='cws-widget'>
                                         <section class='cws_widget_content'>
                                             <!-- see gallery_shortcode() -->
-                                            <div id='ngallery-1' class='ngallery clearfix column--{{ page.col_size}}'>
+                                            <div id='ngallery-1' class='ngallery clearfix column-{{ page.col_size}}'>
                                                 {% for image in pages %}
                                                 <dl class='gallery-item'>
                                                     <dt class='gallery-icon '>
