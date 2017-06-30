@@ -1,0 +1,62 @@
+---
+layout: breadcrumbs
+title: Gallery
+published: "true"
+main_nav: "true"
+permalink: /experiments/
+nav_title: Experiments 
+index: 2
+col_size: 4
+---
+
+{% assign pages = (site.data.selfie_gallery | where: "published" , "true" ) %}
+{% assign size = pages | size %}
+
+
+{% if size > 0 %}
+<div class="bg-level-2-full-width-container kids_bottom_content">
+    <div class="bg-level-2-page-width-container no-padding">
+        <section class="kids_bottom_content_container">
+            <!-- ***************** - START Image floating - *************** -->
+            <div class="page-content">
+                <div class="bg-level-2 first-part"></div>
+                <div class="container l-page-width">
+                    <div class="entry-container ">
+                        <main>
+                            <div class='grid-row clearfix'>
+                                <div class='grid-col grid-col-12'>
+                                    <section class='cws-widget'>
+                                        <section class='cws_widget_content'>
+                                            <!-- see gallery_shortcode() -->
+                                            <div id='ngallery-1' class='ngallery clearfix column-{{ page.col_size}}'>
+                                                {% for image in pages %}
+                                                <dl class='gallery-item'>
+                                                    <dt class='gallery-icon '>
+														<div class='content-wrapper'>
+                                                            <figure>
+																<a href="{{ image.url }}" title="{{ image.title }}" data-rel="prettyPhoto[25727]" class="prettyPhoto kids_picture">
+																	<img src="{{ image.thumb-url }}" alt="{{ image.description }}" /></a>
+															</figure>
+														</div>
+													</dt>
+                                                </dl>
+                                                {% endfor %}
+                                            </div>
+                                        </section>
+                                    </section>
+                                </div>
+                            </div>
+                        </main>
+                        <div class="kids_clear"></div>
+                    </div>
+                    <!-- .entry-container -->
+                </div>
+                <div class="bg-level-2 second-part"></div>
+            </div>
+            <!-- ***************** - END Image floating - *************** -->
+        </section>
+        <!-- .bottom_content_container -->
+    </div>
+    <div class="content_bottom_bg"></div>
+</div>
+{% endif %}
